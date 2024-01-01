@@ -13,7 +13,7 @@ const ParticipantForm = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/Participent/createParticipant",
+        "https://quizapp-backend-ayush.onrender.com/api/Participent/createParticipant",
         {
           method: "POST",
           headers: {

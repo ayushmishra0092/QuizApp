@@ -13,7 +13,7 @@ const QuizDetail = ({ Quiz }) => {
   const handleShareQuiz = async (quizId) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/auth/${quizId}/share`,
+        `https://quizapp-backend-ayush.onrender.com/api/auth/${quizId}/share`,
         {
           method: "GET",
           headers: {

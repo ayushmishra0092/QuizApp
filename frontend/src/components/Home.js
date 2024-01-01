@@ -9,7 +9,7 @@ export default function Home() {
   const getQuizes = async () => {
     // API Call
     const response = await fetch(
-      `http://localhost:5000/api/auth/fetchallquiz`,
+      `https://quizapp-backend-ayush.onrender.com/api/auth/fetchallquiz`,
       {
         method: "GET",
         headers: {
@@ -26,7 +26,7 @@ export default function Home() {
   const deleteQuiz = async (id) => {
     // API Call
     const response = await fetch(
-      `http://localhost:5000/api/auth/deletequiz/${id}`,
+      `https://quizapp-backend-ayush.onrender.com/api/auth/deletequiz/${id}`,
       {
         method: "DELETE",
         headers: {

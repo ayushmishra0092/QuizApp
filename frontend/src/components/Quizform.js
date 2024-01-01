@@ -75,14 +75,17 @@ const QuizCreationForm = (props) => {
   };
   const add_quiz = async (title, description, questions) => {
     // console.log(quizData.title);
-    const response = await fetch(`http://localhost:5000/api/auth/newquiz`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "auth-token": localStorage.getItem("token"),
-      },
-      body: JSON.stringify({ title, description, questions }),
-    });
+    const response = await fetch(
+      `https://quizapp-backend-ayush.onrender.com/api/auth/newquiz`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "auth-token": localStorage.getItem("token"),
+        },
+        body: JSON.stringify({ title, description, questions }),
+      }
+    );
 
     const quiz = await response.json();
     props.showalert("Quiz created successfully", "success");

@@ -14,7 +14,7 @@ const ParticipantQuiz = () => {
       // console.log(quizId)
       try {
         const response = await fetch(
-          `http://localhost:5000/api/auth/quiz/${quizId}`,
+          `https://quizapp-backend-ayush.onrender.com/api/auth/quiz/${quizId}`,
           {
             method: "GET",
           }
